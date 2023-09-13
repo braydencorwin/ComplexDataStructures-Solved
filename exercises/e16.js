@@ -11,7 +11,8 @@
 
 export function find(array, callback) {
   // Your code goes here...
-  return array.filter((element) => callback(element))
+  return array
+  .filter((element) => callback(element) ? element : undefined)[0]
   
 }
 
