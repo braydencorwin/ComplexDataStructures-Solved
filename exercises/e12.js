@@ -6,6 +6,13 @@ import { data } from "../data/data";
 
 export function allPlanetsMoonsCount(data) {
   // Your code goes here...
+  let moonsPer = []
+  data.planets.map(function(planet){
+    if('moons' in planet){
+      moonsPer.push(planet.moons.length)
+    }
+  })
+  return moonsPer.reduce((total, num) => total + num)
 }
 
 

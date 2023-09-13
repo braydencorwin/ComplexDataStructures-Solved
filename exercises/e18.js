@@ -4,9 +4,19 @@
  * Return example: 1902
  */
 
+
 export function getGreatestDiscoveryYear(data) {
   // Your code goes here...
   // feel free to import your `maxBy` or `minBy` methods from previous lessons
+  const callback = (asteroid) => asteroid.discoveryYear
+  
+  let years =[]
+  data.asteroids.map(asteroid => years.push(callback(asteroid)))
+  
+  return years.sort((a,b) =>
+  years.filter(n => n===a).length
+- years.filter(n => n===b).length
+    ).pop();
 }
 
 // === TEST YOURSELF ===

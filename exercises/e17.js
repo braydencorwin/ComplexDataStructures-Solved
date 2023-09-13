@@ -10,11 +10,37 @@
 
 export function minBy(array, cb) {
   // Your code goes here...
+ if(array.length){
+  let min = cb(array[0])
+  for(let i = 0; i< array.length; i++){
+    if(cb(array[i])< min){
+      min = cb(array[i])
+    }
+  }
+
+  return array.find(element => cb(element) == min)
+ } else {
+  return undefined
+ }
+
 
 }
 
 export function maxBy(array, cb) {
   // Your code goes here...
+ if(array.length){
+  let max = cb(array[0])
+  for(let i = 0; i< array.length; i++){
+    if(cb(array[i])> max){
+      max = cb(array[i])
+    }
+  }
+
+  return array.find(element => cb(element) == max)
+ } else{
+  return undefined
+ }
+
 
 }
 
