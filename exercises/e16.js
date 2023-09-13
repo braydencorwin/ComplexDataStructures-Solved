@@ -11,13 +11,7 @@
 
 export function find(array, callback) {
   // Your code goes here...
-  let found = []
-  array.map(function(element){
-    if(callback(element)){
-      found.push(element)
-    }
-  })
-  return found[0]
+  return array.filter((element) => callback(element))
   
 }
 

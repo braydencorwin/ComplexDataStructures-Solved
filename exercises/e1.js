@@ -6,12 +6,8 @@ import { data } from "../data/data";
 
 export function getPlanetNames(data) {
   // Your code goes here...
-  let planetArr=[]
-  data.planets.map(function(planet) {
-    planetArr.push(planet.name) 
-  })
+ return data.planets.map((planet) => (planet.name))
 
-  return planetArr
 }
 
 
